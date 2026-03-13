@@ -1,36 +1,34 @@
-# Kosamphi ITA 2024: Transparency via Legacy Modernization
+# Legacy PHP Routing Fix
+**Structural refactoring and reverse-engineering of undocumented legacy PHP systems to resolve critical routing failures.**
 
-**Legacy PHP Architecture | Government Compliance (ITA) | Secure Document Orchestration**
+## Overview
+This project focuses on the recovery and optimization of a legacy PHP-based hospital management system. By reverse-engineering undocumented source code, the project identified and resolved critical routing failures and broken internal links. The refactoring process restored system stability, improved navigation logic, and extended the lifecycle of the existing infrastructure without requiring a complete rewrite.
 
-Developed during my tenure at the **Office of the District Public Health, Kosamphinakhorn**, this system was engineered to digitize and automate the Integrity and Transparency Assessment (ITA) workflow. It serves as a centralized hub for public disclosure and administrative accountability.
+## Technical Analysis
 
----
+| Challenge | Solution |
+| :--- | :--- |
+| **Undocumented Code** | Performed full-scale reverse-engineering to map system architecture. |
+| **Routing Failures** | Reconstructed URL handling and internal path logic. |
+| **Legacy Compatibility** | Maintained support for older PHP environments while improving efficiency. |
+| **System Reliability** | Restored broken functional modules within a high-stress clinical environment. |
 
-## 1. System Architecture & Legacy Stack
+## Tech Stack
 
-The project was built using a **Reliable Legacy Stack** to ensure 100% compatibility with existing hospital-grade hosting environments while maintaining high security and performance standards.
+| Component | Technology |
+| :--- | :--- |
+| **Backend** | Legacy PHP |
+| **Web Server** | Apache (mod_rewrite) |
+| **Database** | MySQL |
+| **Methodology** | Reverse-engineering & Structural Refactoring |
 
+## Project Structure
 
+| Directory / File | Description |
+| :--- | :--- |
+| `src/` | Refactored PHP source files with corrected routing logic. |
+| `config/` | Updated server and application configurations. |
+| `.htaccess` | Managed URL rewriting and path redirection rules. |
 
-```mermaid
-graph TD
-    %% User Layer
-    User[Public / Admin] -->|HTTP Request| Web[Web Interface: HTML5/CSS3]
-
-    %% Logic Layer
-    Web -->|Processing| App[Legacy PHP Engine]
-    
-    %% Middleware/Logic
-    App -->|Auth| Sec[Session-based Authentication]
-    App -->|CRUD Operations| DB[(MySQL Database)]
-
-    %% Deployment
-    subgraph Infrastructure [MOPH Production Environment]
-        App
-        DB
-    end
-
-    %% Styling
-    style App fill:#777bb4,color:#fff
-    style DB fill:#4479a1,color:#fff
-    style Infrastructure fill:#f5f5f5,stroke:#333,stroke-dasharray: 5 5
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
